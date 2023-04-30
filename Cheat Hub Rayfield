@@ -138,4 +138,6 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/cheesynob39/SB-SR/ma
    end,
 })
 
+Frame.Parent.Draggable = true
+
 Rayfield:LoadConfiguration()
