@@ -79,7 +79,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/
 local Section1 = Tab1:CreateButton({
    Name = "Fly Script",
    Callback = function()
-loadstring(game:HttpGet('https://pastebin.com/raw/YSL3xKYU'))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LyricArc72030/Cheat-Hub-Scripts/main/Fly%20V3%20Script"))()
    end,
 })
 local Section1 = Tab1:CreateButton({
