@@ -1,0 +1,78 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+
+-----Window-----
+
+local Window = Library.CreateLib("Cheats Hub", "Ocean")
+
+-----Tabs-----
+
+local Tab1 = Window:NewTab("Game Cheats")
+local Tab2 = Window:NewTab("Universal Scripts")
+local Tab3 = Window:NewTab("Game Scripts")
+
+-----Sections-----
+
+local Tab1Section1 = Tab1:NewSection("This gui is still in development! Expect some bugs!")
+local Tab2Section2 = Tab2:NewSection("All Popular Universal Scripts")
+local Tab3Section3 = Tab3:NewSection("All Working Game Scripts (Needs Key)!")
+local Tab3Section4 = Tab3:NewSection("All Working Game Scripts (No Key Needed)!")
+
+-----Buttons-----
+
+Tab1Section1:NewButton("Infinite Jump", "Gives you Inf Jump", function()
+local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+    print("Clicked")
+end)
+Tab2Section2:NewButton("Infinite Yield", "Allows you to use commands with Infinite Yield!", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    print("Clicked")
+end)
+Tab2Section2:NewButton("Swim Script", "Allows you to swim in the air everywhere!", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/53yEaP17"))()
+    print("Clicked")
+end)
+Tab2Section2:NewButton("Virtual Keyboard", "Allows you to have a second keyboard with more keys!", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+    print("Clicked")
+end)
+Tab2Section2:NewButton("Fly Script", "Allows you to fly everywhere!", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/YSL3xKYU'))()
+    print("Clicked")
+end)
+Tab3Section3:NewButton("BlackTrap (Pet Sim X)", "Pet Sim X Script!", function()
+loadstring(game:HttpGetAsync("https://blacktrap.org/blacktrap/users/checkpoint/Auth.txt"))()
+    print("Clicked")
+end)
+Tab3Section3:NewButton("HoHo Hub (Blox Fruits)", "Blox Fruits Script!", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+    print("Clicked")
+end)
+Tab3Section4:NewButton("R20 (Slap Battles)", "Slap Battles Script!", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/cheesynob39/R2O/main/LOADSTRING.lua"))()
+    print("Clicked")
+end)
+Tab3Section4:NewButton("R20 (Slap Royale)", "Slap Royale Script!", function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/cheesynob39/SB-SR/main/Slap_Royale.lua")))()
+    print("Clicked")
+end)
+
+-----Toggles-----
+
+Tab1Section1:NewToggle("Larger FOV", "Change FOV From 80 to 120", function(state)
+    if state then
+        game.Workspace.CurrentCamera.FieldOfView = 120
+    else
+        game.Workspace.CurrentCamera.FieldOfView = 80
+    end
+end)
+
+-----Sliders-----
+
+Tab1Section1:NewSlider("WalkSpeed", "Set your WalkSpeed", 250, 10, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+end)
