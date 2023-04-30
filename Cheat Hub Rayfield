@@ -48,9 +48,9 @@ Rayfield:Notify({
 
 -----Tabs-----
 
-local MainTab = Window:CreateTab("Game Cheats", 4483362458) -- Title, Image
-local Tab1 = Window:CreateTab("Main Scripts", 4483362458) 
-local Tab2 = Window:CreateTab("Game Scripts", 4483362458)
+local MainTab = Window:CreateTab("Game Cheats") -- Title, Image
+local Tab1 = Window:CreateTab("Main Scripts") 
+local Tab2 = Window:CreateTab("Game Scripts")
 
 -----Buttons/Sections/Toggles/Sliders/Others-----
 
