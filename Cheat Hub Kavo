@@ -41,7 +41,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifv
     print("Clicked")
 end)
 Tab2Section2:NewButton("Fly Script", "Allows you to fly everywhere!", function()
-loadstring(game:HttpGet('https://pastebin.com/raw/YSL3xKYU'))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LyricArc72030/Cheat-Hub-Scripts/main/Fly%20V3%20Script"))()
     print("Clicked")
 end)
 Tab3Section3:NewButton("BlackTrap (Pet Sim X)", "Pet Sim X Script!", function()
