@@ -1,0 +1,124 @@
+getgenv().SecureMode = true
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+-----Main Window-----
+
+local Window = Rayfield:CreateWindow({
+   Name = "Cheats Hub",
+   LoadingTitle = "Cheats Hub",
+   LoadingSubtitle = "by Max Scripts",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Cheats File"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+-----Tabs-----
+
+local MainTab = Window:CreateTab("Game Cheats", 4483362458) -- Title, Image
+local Tab1 = Window:CreateTab("Main Scripts", 4483362458) 
+local Tab2 = Window:CreateTab("Game Scripts", 4483362458)
+
+-----Buttons/Sections/Toggles/Sliders/Others-----
+
+local MainSection = MainTab:CreateSection("All Game Cheats (Working)!")
+local MainSection = MainTab:CreateButton({
+   Name = "Infinite Jump",
+   Callback = function()
+   local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+   end,
+})
+local MainSection = MainTab:CreateToggle({
+   Name = "Larger FOV",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(state)
+if state then
+        game.Workspace.CurrentCamera.FieldOfView = 120
+    else
+        game.Workspace.CurrentCamera.FieldOfView = 80
+    end
+   end,
+})
+local MainSection = MainTab:CreateInput({
+   Name = "WalkSpeed (Rec:Max. Of 500)",
+   PlaceholderText = "Input Speed",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(v)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+   end,
+})
+local Section1 = Tab1:CreateSection("All Popular Universal Scripts!")
+local Section1 = Tab1:CreateButton({
+   Name = "Infinite Yield ",
+   Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   end,
+})
+local Section1 = Tab1:CreateButton({
+   Name = "Fly Script",
+   Callback = function()
+loadstring(game:HttpGet('https://pastebin.com/raw/YSL3xKYU'))()
+   end,
+})
+local Section1 = Tab1:CreateButton({
+   Name = "Swim Script",
+   Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/53yEaP17"))()
+   end,
+})
+local Section1 = Tab1:CreateButton({
+   Name = "Virtual Keyboard Script",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+   end,
+})
+local Section2 = Tab2:CreateSection("All Game Scripts (Needs Key)!")
+local Section2 = Tab2:CreateButton({
+   Name = "BlackTrap (Pet Sim X)",
+   Callback = function()
+loadstring(game:HttpGetAsync("https://blacktrap.org/blacktrap/users/checkpoint/Auth.txt"))()
+   end,
+})
+local Section2 = Tab2:CreateButton({
+   Name = "HoHo Hub (Blox Fruits)",
+   Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+   end,
+})
+local Section3 = Tab2:CreateSection("All Game Scripts (No Key)!")
+local Section3 = Tab2:CreateButton({
+   Name = "R20 (Slap Battles)",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/cheesynob39/R2O/main/LOADSTRING.lua"))()
+   end,
+})
+local Section3 = Tab2:CreateButton({
+   Name = "R20 (Slap Royale)",
+   Callback = function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/cheesynob39/SB-SR/main/Slap_Royale.lua")))()
+   end,
+})
+
+Rayfield:LoadConfiguration()
