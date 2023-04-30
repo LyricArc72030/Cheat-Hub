@@ -34,7 +34,7 @@ local Window = Rayfield:CreateWindow({
 Rayfield:Notify({
    Title = "WARNING!",
    Content = "The Gui is Still in Development! Expect some Bugs!",
-   Duration = 6.5,
+   Duration = 20,
    Image = 4483362458,
    Actions = { -- Notification Buttons
       Ignore = {
