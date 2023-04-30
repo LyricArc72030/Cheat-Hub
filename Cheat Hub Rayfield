@@ -87,7 +87,6 @@ local MainSection = MainTab:CreateInput({
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
    end,
 })
-local Label = MainTab:CreateLabel("More Coming Soon!?")
 local Section1 = Tab1:CreateSection("All Popular Universal Scripts!")
 local Section1 = Tab1:CreateButton({
    Name = "Infinite Yield ",
