@@ -72,7 +72,6 @@ local MainSection = MainTab:CreateInput({
    PlaceholderText = "Input FOV",
    RemoveTextAfterFocusLost = false,
    Callback = function(v)
-game.Workspace.CurrentCamera.FieldOfView = v
    end,
 })
 local MainSection = MainTab:CreateInput({
