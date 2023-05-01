@@ -68,14 +68,6 @@ end)
    end,
 })
 local MainSection = MainTab:CreateInput({
-   Name = "Set FOV",
-   PlaceholderText = "Input FOV",
-   RemoveTextAfterFocusLost = false,
-   Callback = function(v)
-game.Workspace.CurrentCamera.FieldOfView = v
-   end,
-})
-local MainSection = MainTab:CreateInput({
    Name = "Set WalkSpeed",
    PlaceholderText = "Input Speed",
    RemoveTextAfterFocusLost = false,
